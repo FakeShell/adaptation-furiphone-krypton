@@ -13,3 +13,5 @@ override_dh_auto_build:
 override_dh_installsystemd:
 	dh_installsystemd -padaptation-krypton-configs --name=krypton-performance krypton-performance.service --no-start
 	dh_installsystemd -padaptation-krypton-configs --name=krypton-startup krypton-startup.service --no-start
+
+override_dh_shlibdeps:
