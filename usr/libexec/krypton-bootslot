@@ -1,0 +1,11 @@
+#!/bin/bash
+
+SLOT=$(grep -o 'androidboot\.slot_suffix=..' /proc/cmdline | cut -d "=" -f2)
+
+if [ "$SLOT" = "_a" ]; then
+    ln -s /dev/disk/by-partlabel/boot_a /dev/disk/by-partlabel/boot
+    ln -s /dev/disk/by-partlabel/dtbo_a /dev/disk/by-partlabel/dtbo
+else
+    ln -s /dev/disk/by-partlabel/boot_b /dev/disk/by-partlabel/boot
+    ln -s /dev/disk/by-partlabel/dtbo_b /dev/disk/by-partlabel/dtbo
+fi
