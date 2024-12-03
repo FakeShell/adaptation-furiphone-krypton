@@ -17,5 +17,3 @@
 /android/vendor/lib64/hw/vulkan.mali.so /usr/lib/droid-vendor-overlay/lib64/vulkan.mali.so
 /android/vendor/lib64/hw/vulkan.mt6877.so /usr/lib/droid-vendor-overlay/lib64/vulkan.mt6877.so
 /usr/lib/systemd/user/flashlightd-slider.service /usr/lib/systemd/user/gnome-session.target.wants/flashlightd-slider.service
-/dev/null /etc/systemd/system/phosh-getcutout.service
-/dev/null /etc/systemd/system/minui-getres.service
