@@ -1,0 +1,26 @@
+#!/bin/bash
+
+MAX_BRIGHTNESS_NODE="/sys/class/leds/lcd-backlight/max_brightness"
+BRIGHTNESS_NODE="/sys/class/leds/lcd-backlight/brightness"
+SYSTEMD_BACKLIGHT_PATH="/var/lib/systemd/backlight/leds:lcd-backlight"
+
+max_brightness=$(<"${MAX_BRIGHTNESS_NODE}")
+current_brightness=$(<"${BRIGHTNESS_NODE}")
+
+if [ ! -f $BRIGHTNESS_NODE ]; then
+	echo "Brightness node is not available. exiting"
+	exit 0
+fi
+
+if [ $current_brightness -eq "0" ]; then
+	if [ -f $SYSTEMD_BACKLIGHT_PATH ]; then
+		systemd_backlight=$(<"${SYSTEMD_BACKLIGHT_PATH}")
+		if [ $systemd_backlight -eq "0" ]; then
+			echo $((max_brightness / 2)) > $BRIGHTNESS_NODE
+		else
+			echo $systemd_backlight > $BRIGHTNESS_NODE
+		fi
+	else
+		echo $((max_brightness / 2)) > $BRIGHTNESS_NODE
+	fi
+fi
