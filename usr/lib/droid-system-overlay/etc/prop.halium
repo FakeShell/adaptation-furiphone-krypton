@@ -57,3 +57,22 @@ vendor.debug.hwc.remove_invisible_layers=1
 vendor.debug.hwc.glai_wo_fence=1
 persist.vendor.debug.hwc.log=E
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=0
+
+# disable connsys coredump mode
+persist.vendor.connsys.coredump.mode=0
+
+# disable neural networks hal for now
+ro.vendor.mtk_nn_baseline_support=0
+
+# disable perfetto (traced, traced_probes)
+persist.traced.enable=0
+
+# disable halium drm service
+drm.service.enabled=false
+
+# we support xfrm. don't start ipsec_mon
+persist.vendor.xfrm_support=1
+
+# disable aee core dumps
+persist.vendor.aeev.core.dump=disable
+persist.vendor.aeev.core.direct=disable

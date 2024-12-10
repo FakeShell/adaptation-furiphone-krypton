@@ -1,0 +1,3 @@
+service vendor.thermal-hal-2-0.mtk /vendor/bin/hw/android.hardware.thermal@2.0-service.mtk_HALIUM_DISABLED
+    disabled
+    oneshot

@@ -1,0 +1,4 @@
+service installd /system/bin/installd_HYBRIS_DISABLED
+    oneshot
+    disabled
+    class main

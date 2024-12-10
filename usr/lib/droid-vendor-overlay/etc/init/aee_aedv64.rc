@@ -1,0 +1,5 @@
+service aee_aedv64 /vendor/bin/aee_aedv64_HALIUM_DISABLED
+    oneshot
+    disabled
+    group root readproc system debuggerd log radio
+    writepid /dev/cpuset/system-background/tasks

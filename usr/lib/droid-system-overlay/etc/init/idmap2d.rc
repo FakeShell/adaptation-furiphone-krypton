@@ -1,0 +1,6 @@
+service idmap2d /system/bin/idmap2d_HYBRIS_DISABLED
+    oneshot
+    disabled
+    class main
+    user system
+    group system

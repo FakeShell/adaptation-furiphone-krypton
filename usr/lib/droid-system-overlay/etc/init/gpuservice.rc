@@ -1,0 +1,6 @@
+service gpu /system/bin/gpuservice_HYBRIS_DISABLED
+    oneshot
+    disabled
+    class core
+    user gpu_service
+    group graphics readtracefs
