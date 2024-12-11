@@ -16,4 +16,6 @@ iw phy phy0 wowlan enable magic-packet
 
 echo "0xFF:0x03" > /proc/net/wlan/dbgLevel
 
+setprop ctl.stop statsd
+
 exit 0
