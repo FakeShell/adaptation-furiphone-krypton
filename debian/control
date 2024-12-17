@@ -4,8 +4,6 @@ Section: metapackages
 Priority: optional
 Build-Depends: debhelper-compat (= 13),
                libdbus-1-dev,
-               libgnome-desktop-3-dev,
-               libgtk-3-dev,
                libglib2.0-dev,
                libwayland-dev,
                wayland-protocols,
@@ -32,6 +30,6 @@ Description: adaptation-furiphone-krypton - meta
 
 Package: adaptation-krypton-configs
 Architecture: arm64
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, ${shlibs:Depends},
          bsdextrautils,
 Description: krypton's adaptation configs
