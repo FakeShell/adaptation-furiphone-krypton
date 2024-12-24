@@ -1,0 +1,3 @@
+service tombstoned /system/bin/tombstoned_HYBRIS_DISABLED
+    disabled
+    oneshot
